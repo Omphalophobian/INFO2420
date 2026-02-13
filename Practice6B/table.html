@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+	
+<title>HTML Practice 6 - Tables</title>
+
+<style> 
+
+table, td, th {border: 1px solid black;}
+
+table {
+   border-collapse: separate;
+   border-spacing: 5px;
+   padding: 5px;
+}
+
+td, th {
+  padding: 5px;
+}
+
+.schedule {
+   width: 550px;
+   margin: auto;
+   text-align: center;
+}
+
+.caption {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #003300;
+  text-shadow: .1em .1em .05em gainsboro;
+  padding: .5em;
+}
+
+.rowhead {
+   font-weight: bold;
+   color: #000000;
+   background-color: #CCCCCC;
+   width: 25%;
+}
+
+.days {
+   width: 15%;
+}
+
+.weekday {
+   font-weight: bold;
+   color: #000000;
+   background-color: #99FF66;
+}
+
+</style>
+</head>
+
+<body>
+<div class="schedule">
+   <table>
+      <caption class="caption">My Class Schedule</caption>
+      <colgroup>
+         <col class="rowhead">
+         <col class="days" span="5">
+      </colgroup>
+      <tr>
+         <th class="rowhead">Courses</th>
+         <th class="weekday">Monday</th>
+         <th class="weekday">Tuesday</th>
+         <th class="weekday">Wednesday</th>
+         <th class="weekday">Thursday</th>
+         <th class="weekday">Friday</th>
+      </tr>
+      <tr>
+         <td class="rowhead">INFO 1120</td>
+         <td></td>
+         <td>9 - 11</td>
+         <td></td>
+         <td>9 - 11</td>
+         <td rowspan="2"></td>
+      </tr>
+      <tr>
+         <td class="rowhead">MATH 1010</td>
+         <td colspan="4">12 - 1</td>
+      </tr>
+      <tr>
+         <td class="rowhead">INFO 2420</td>
+         <td colspan="5">Online: Available 24/7</td>
+      </tr>
+	
+   </table>
+</div>
+</body>
+
+</html>
