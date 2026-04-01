@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>JavaScript Practice 1- Slideshow</title>
+
+<style type="text/css">
+
+.flashclass{ /*sample CSS class added to image slideshow container*/
+	height: 220px;
+	width: 100px; /*a width should be defined for transition to work*/
+	border: 5px solid orange;
+	padding: 5px;
+
+}
+
+.flashclass img{
+	border-width: 0;
+}
+
+</style>
+
+<script type="text/javascript" src="transitionshow.js">
+
+/***********************************************
+* Random Transitions Slideshow- by JavaScript Kit (www.javascriptkit.com)
+* This notice must stay intact for usage
+* Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+***********************************************/
+
+</script>
+
+</head>
+
+<body >
+
+<script type="text/javascript">
+
+var flashyshow=new flashyslideshow({ //create instance of slideshow
+	wrapperid: "myslideshow", //unique ID for this slideshow
+	wrapperclass: "flashclass", //desired CSS class for this slideshow
+	imagearray: [
+		["Images/Thumbnails/HamsterSm.jpg","http://www.javascriptkit.com/script/script2/transitionshow.shtml", "_blank", "Ah, the cool breeze of autumn."],
+		["Images/Thumbnails/PigSm.jpg", "", "", "Flowers spring back to life in the Spring."],
+		["Images/Thumbnails/SaladSm.jpg", "", "", "Winter is nice, as long as there's snow right?"],
+		["Images/Thumbnails/StorkSm.jpg", "https://youtu.be/dQw4w9WgXcQ?si=Sz7fJw24RvdgqkGy", "", "Such a nice Summer getaway"]
+	],
+	pause: 200, //pause between content change (millisec)
+	transduration: 1000 //duration of transition (affects only IE users)
+})
+
+</script>
+		
+	
+	</body>
+
+</html>
