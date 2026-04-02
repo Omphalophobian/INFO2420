@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Rent a Pet - Graphics</title>
+
+<style type="text/css">
+
+
+	#thumbs, #image {
+		width: 900px;
+		text-align: center;
+		margin: 0 auto 0 auto;
+		color: #000;
+	}
+
+	#thumbs {
+		margin-top: 10px;
+	}
+
+			
+	#thumbs img {
+		border: solid 1px #000;
+		margin: 5px;
+	}
+
+	#image{
+		height:500px;
+	}
+
+	.instructions{
+		font-style:italic;
+	}
+
+	body {
+		background-color: #fff5f2;
+		font-family: Helvetica, sans-serif;
+	}
+
+</style>
+
+<script language="JavaScript" type="text/javascript">
+
+	PrintButton1 = new Image
+	PrintButton2 = new Image
+	logo1 = new Image
+	logo2 = new Image
+if (document.images) {
+	PrintButton1.src = 'Images/PrintDefault.png'
+	PrintButton2.src = "Images/PrintHover.png"
+	logo1.src = "Images/PanLogo.png"
+	logo2.src = "Images/UtahLogo.png"
+}
+
+
+		var imgArray = new Array(
+			'CheesecakeLg.jpg',
+			'Chef4Lg.jpg',
+			'Food1Lg.jpg',
+			'GrillLg.jpg'
+		);
+
+
+		var titleArray = new Array(
+			'Cheesecake',
+			'Chef Posing',
+			'Food Setting',
+			'Grilling Steak'
+		);
+			
+		var imgPath = "Images/Fullsize/";
+		
+		function swapImage(imgID) {
+
+			var theImage = document.getElementById('theImage');
+			var textDiv = document.getElementById('bottomText');
+
+			var newImg;
+			var textTitle;
+
+			newImg = imgArray[imgID];
+			theImage.src = imgPath + newImg;
+
+			textTitle=titleArray[imgID];
+
+      			textDiv.innerHTML = textTitle;
+		}
+			
+		function preloadImages() {		
+			for(var i = 0; i < imgArray.length; i++) {
+				var tmpImg = new Image;
+				tmpImg.src = imgPath + imgArray[i];
+			}
+		}
+</script>
+
+
+</head>
+<body  onload="preloadImages(); document.getElementById('PrintButton').src = PrintButton1.src; document.getElementById('logo').src = logo1.src;">
+
+<div align="center">
+
+<div>
+	<a href="" onMouseOver="document.getElementById('PrintButton').src = PrintButton2.src;"
+	onMouseOut="document.getElementById('PrintButton').src = PrintButton1.src;">
+
+	<img id="PrintButton" src="Images/PrintDefault.png" width="200" height="50" 
+	alt="PrintButton" style="border:none;"/>
+
+	</a>
+</div>
+
+
+<div id="logoBox">
+	<a href="logo.html" onMouseOver="document.getElementById('logo').src = logo2.src;"
+	onMouseOut="document.getElementById('logo').src = logo1.src;">
+
+	<img id="logo" src="Images/PanLogo.png" height="200" alt="logo" style="border:none;"/>
+
+	</a>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+
+
+<div id="thumbs">
+		<img src="Images/Thumbnails/CheesecakeSm.jpg" alt="Cheesecake" onmouseover="swapImage(0);" />
+		<img src="Images/Thumbnails/Chef4Sm.jpg" alt="Chef Posing" onmouseover="swapImage(1);" />
+		<img src="Images/Thumbnails/Food1Sm.jpg" alt="Food Setting" onmouseover="swapImage(2);" />
+		<img src="Images/Thumbnails/GrillSm.jpg" alt="Grilling Steak" onmouseover="swapImage(3);" />
+		
+</div>
+
+	<div id="image">
+
+		<img id="theImage" src="Images/Fullsize/CheesecakeLg.jpg" alt="Cheesecake" />
+		<h3 id="bottomText">Hover over a thumbnail to view the image</h3>
+	</div>
+<img src="Images/2colback.jpg" width=100%/>
+<br />
+<br />
+<br />
+<br />
+
+
+
+</div>
+
+<p>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
+</p>
+  
+
+</body>
+</html>
