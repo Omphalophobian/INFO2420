@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>Home - Native Cooking of Utah</title>
+    <!-- TemplateEndEditable -->
+    <link rel="stylesheet" href="https://use.typekit.net/mii1wpg.css">
+    <link rel="stylesheet" href="mystyles.css">
+    <script type="text/javascript" src="myscripts.js"></script>
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+<body onload="preloadImages(); document.getElementById('logo').src = logo1.src;">
+    <div id="container">
+        <header>
+            <div id="branding">
+                <img id="logo" src="Images/PanLogo.png" alt="Native Cooking of Utah logo" onmouseover="document.getElementById('logo').src = logo2.src;" onmouseout="document.getElementById('logo').src = logo1.src;">
+                <img id="banner" src="Images/NativeCookingBanner.jpg" alt="Native Cooking of Utah banner">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="Tributes.html">Tributes</a></li>
+                    <li><a href="Survey.html">Survey</a></li>
+                    <li><a href="Favorites.html">Favorites</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+          <!-- TemplateBeginEditable name="PageContent" -->
+            <article>
+              <h1>Native Cooking of Utah</h1>
+              <p>Welcome to Native Cooking of Utah! If you love to cook like we do, you should enjoy looking around this site. Take a look at our Recipes and take the opportunity to complete our survey.</p>
+              <h2>Featured Thumbnails &amp; Fullsize Images</h2>
+              <p class="instructions">Hover over each thumbnail to swap the fullsize image.</p>
+              <div id="thumbs"> <img src="Images/Thumbnails/CheesecakeSm.jpg" alt="Cheesecake thumbnail" onMouseOver="swapImage(0);"> <img src="Images/Thumbnails/Chef4Sm.jpg" alt="Chef posing thumbnail" onMouseOver="swapImage(1);"> <img src="Images/Thumbnails/Food1Sm.jpg" alt="Food setting thumbnail" onMouseOver="swapImage(2);"> <img src="Images/Thumbnails/GrillSm.jpg" alt="Grilling steak thumbnail" onMouseOver="swapImage(3);"> </div>
+              <div id="image"> <img id="theImage" src="Images/Fullsize/CheesecakeLg.jpg" alt="Cheesecake fullsize image">
+                <h3 id="bottomText">Hover over a thumbnail to view the image</h3>
+              </div>
+              <h2>Mini-Tribute</h2>
+              <div id="miniTribute"> <img src="Images/Tributes/GreenJello2Sm.jpg" alt="A child enjoying green jello">
+                <div class="tributeText">
+                  <p>“My name is Daisy Daniels and I have enjoyed using the recipes I have found at your website. I thought I already knew how to cook like a Utahan, but I have been able to expand my repertoire after trying out some of your more unusual offerings.”</p>
+                  <p><a href="Tributes.html">Read the full tribute &raquo;</a></p>
+                </div>
+              </div>
+            </article>
+        <!-- TemplateEndEditable --> </section>
+
+        <footer>
+          <p><a href="mailto:webmaster@nativecookingutah.com">webmaster@nativecookingutah.com</a></p>
+            <p>This web site has been created solely for educational purposes.</p>
+        </footer>
+    </div>
+</body>
+</html>
